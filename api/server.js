@@ -10,11 +10,14 @@ app.get('/:id', async (req, res) => {
     const response = await fetch(url);
     const data = await response.json();
     const pokemonName = data.name;
-    res.send(pokemonName); // Enviar solo el nombre como respuesta
+    res.send(firstLetterUpperCase(pokemonName)); // Enviar solo el nombre como respuesta
   } catch (error) {
     res.status(500).send("WTF!");
   }
 });
-app.listen(3000, () => console.log('Server ready'));
+
+function firstLetterUpperCase(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 module.exports = app;
