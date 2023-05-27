@@ -1,0 +1,15 @@
+{
+  "name": "pokemon-api",
+  "version": "0.0.1",
+  "description": "Only get name from PokéAPI",
+  "main": "api/server.js",
+  "author": "crishanbr",
+  "license": "MIT",
+  "scripts": {
+    "start": "node api/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "2.6.1"
+  }
+}
